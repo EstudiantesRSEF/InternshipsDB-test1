@@ -62,13 +62,13 @@ const Post = () => {
           Submit a new internship to our database
         </Heading>
         <FormControl id="title" isRequired mb={marginBetweenElements}>
-          <FormLabel>Opportunity's title</FormLabel>
+          <FormLabel>Opportunitie's title</FormLabel>
           <Input
             type="text"
             name="title"
             value={content.title}
             onChange={onChange}
-            placeholder="RSEF Summer Fellows Internship"
+            placeholder="ESA Young Minds Internship"
             variant="filled"
           />
         </FormControl>
