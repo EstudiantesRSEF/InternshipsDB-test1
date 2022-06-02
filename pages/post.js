@@ -48,8 +48,7 @@ const Post = () => {
 
   const onChangeCBOX = j => {
     const {value, name} = j.target
-    const k = setState(prevState => {...prevState, [name]: value})
-    setContent(k)
+    setContent(prevState => ({prevState, [name]: value}))
   }
 
   const onSubmit = async () => {
