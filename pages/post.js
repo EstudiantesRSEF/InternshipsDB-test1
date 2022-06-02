@@ -70,10 +70,10 @@ const Post = () => {
           <FormLabel as="legend">CheckboxGroup test</FormLabel>
           <CheckboxGroup>
             <HStack spacing="24px">
-              <Checkbox type="text" name="cbox1" value="Valor1" onChange={onChange} variant="filled">Valor1</Checkbox>
-              <Checkbox type="text" name="cbox2" value="Valor2" onChange={onChange} variant="filled">Valor2</Checkbox>
-              <Checkbox type="text" name="cbox3" value="Valor3" onChange={onChange} variant="filled">Valor3</Checkbox>
-              <Checkbox type="text" name="cbox4" value="Valor4" onChange={onChange} variant="filled">Valor4</Checkbox>
+              <Checkbox type="text" name="cbox" value="Valor1" onChange={onChange} variant="filled">Valor1</Checkbox>
+              <Checkbox type="text" name="cbox" value="Valor2" onChange={onChange} variant="filled">Valor2</Checkbox>
+              <Checkbox type="text" name="cbox" value="Valor3" onChange={onChange} variant="filled">Valor3</Checkbox>
+              <Checkbox type="text" name="cbox" value="Valor4" onChange={onChange} variant="filled">Valor4</Checkbox>
             </HStack>
           </CheckboxGroup>
         </FormControl>
