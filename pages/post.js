@@ -66,7 +66,7 @@ const Post = () => {
         </Heading>
         <FormControl id="premium" isRequired mb={marginBetweenElements}>
           <FormLabel>Premum Opportunity Checkbox test</FormLabel>
-          <Checkbox type="text" name="premium" value="false" onChange={onChange} variant="filled">False</Checkbox>
+          <Checkbox value="false" onChange={onChange} variant="filled">False</Checkbox>
         </FormControl>
         <FormControl id="title" isRequired mb={marginBetweenElements}>
           <FormLabel>Opportunity's title</FormLabel>
