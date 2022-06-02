@@ -64,10 +64,10 @@ const Post = () => {
         <Heading mt={5} mb={7}>
           Submit a new internship to our database
         </Heading>
-        //<FormControl id="testeo" isRequired mb={marginBetweenElements}>
-        //  <FormLabel>Opportunity's checkbox test</FormLabel>
-        //  <Checkbox value={content.testeo} onChange={onChange}>Test checkbox</Checkbox>
-        //</FormControl>
+        <FormControl id="testeo" isRequired mb={marginBetweenElements}>
+          <FormLabel>Opportunity's checkbox test</FormLabel>
+          <Checkbox value={content.testeo} onChange={onChange}>Test checkbox</Checkbox>
+        </FormControl>
         <FormControl id="title" isRequired mb={marginBetweenElements}>
           <FormLabel>Opportunity's title</FormLabel>
           <Input
