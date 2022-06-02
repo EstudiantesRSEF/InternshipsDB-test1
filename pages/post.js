@@ -22,7 +22,6 @@ import {Container} from '../components'
 const Post = () => {
   const router = useRouter()
   const [content, setContent] = useState({
-    premium:'',
     title: '',
     description: '',
     educationLevel: '',
@@ -64,10 +63,6 @@ const Post = () => {
         <Heading mt={5} mb={7}>
           Submit a new internship to our database
         </Heading>
-        <FormControl id="premium" isRequired mb={marginBetweenElements}>
-          <FormLabel>Premum Opportunity Checkbox test</FormLabel>
-          <Checkbox value="false" onChange={onChange}>False</Checkbox>
-        </FormControl>
         <FormControl id="title" isRequired mb={marginBetweenElements}>
           <FormLabel>Opportunity's title</FormLabel>
           <Input
