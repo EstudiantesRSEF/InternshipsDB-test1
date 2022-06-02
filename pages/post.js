@@ -46,11 +46,6 @@ const Post = () => {
     setContent(prevState => ({...prevState, [name]: value}))
   }
 
-  const onChangeCBOX = j => {
-    const {value, name} = j.target
-    setContent({...prevState, [name]: value}))
-  }
-
   const onSubmit = async () => {
     await axios.post('/api/entry', content)
     router.push('/success')
@@ -73,12 +68,12 @@ const Post = () => {
         </Heading>
         <FormControl id="cbox" isRequired mb={marginBetweenElements} as='fieldset'>
           <FormLabel as="legend">CheckboxGroup test</FormLabel>
-          <CheckboxGroup onChange={onChangeCBOX} variant="filled">
+          <CheckboxGroup value={content.cbox} onChange={onChange} variant="filled">
             <HStack spacing="24px">
-              <Checkbox type="text" name="cbox1" value="Valor1">Valor1</Checkbox>
-              <Checkbox type="text" name="cbox2" value="Valor2">Valor2</Checkbox>
-              <Checkbox type="text" name="cbox3" value="Valor3">Valor3</Checkbox>
-              <Checkbox type="text" name="cbox4" value="Valor4">Valor4</Checkbox>
+              <Checkbox type="text" name="cbox1">Valor1</Checkbox>
+              <Checkbox type="text" name="cbox2">Valor2</Checkbox>
+              <Checkbox type="text" name="cbox3">Valor3</Checkbox>
+              <Checkbox type="text" name="cbox4">Problema descubierto</Checkbox>
             </HStack>
           </CheckboxGroup>
         </FormControl>
