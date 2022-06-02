@@ -88,18 +88,31 @@ const Post = () => {
             The description needs to be of at least 180 characters.
           </FormHelperText>
         </FormControl>
-        <FormControl id="educationLevel" isRequired mb={marginBetweenElements}>
-          <FormLabel>Education level</FormLabel>
-          <Select
+        //<FormControl id="educationLevel" isRequired mb={marginBetweenElements}>
+        //  <FormLabel>Education level</FormLabel>
+        //  <Select
+        //    name="educationLevel"
+        //    onChange={onChange}
+        //    placeholder="Relevant education level"
+        //    variant="filled"
+        //  >
+        //    <option value="Bachelors">Bachelors</option>
+        //    <option value="Masters">Masters</option>
+        //    <option value="PhD">PhD</option>
+        //  </Select>
+        //</FormControl>
+        <FormControl as='fieldset' id="educationLevel">
+          <FormLabel as='legend'>Education level</FormLabel>
+          <CheckboxGroup
             name="educationLevel"
             onChange={onChange}
-            placeholder="Relevant education level"
-            variant="filled"
           >
-            <option value="Bachelors">Bachelors</option>
-            <option value="Masters">Masters</option>
-            <option value="PhD">PhD</option>
-          </Select>
+            <HStack spacing='24px'>
+              <Checkbox value='Bachelors'>Bachelors</Checkbox>
+              <Checkbox value='Masters'>Masters</Checkbox>
+              <Checkbox value='PhD'>PhD</Checkbox>
+            </HStack>
+          </CheckboxGroup>
         </FormControl>
         <FormControl id="modality" isRequired mb={marginBetweenElements}>
           <FormLabel>Modality</FormLabel>
