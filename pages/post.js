@@ -68,7 +68,7 @@ const Post = () => {
         </Heading>
         <FormControl id="cbox" isRequired mb={marginBetweenElements} as='fieldset'>
           <FormLabel as="legend">CheckboxGroup test</FormLabel>
-          <CheckboxGroup value={content.cbox1} onChange={onChange} variant="filled">
+          <CheckboxGroup value={content.cbox} onChange={onChange} variant="filled">
             <HStack spacing="24px">
               <Checkbox type="text" name="cbox1">Valor1</Checkbox>
               <Checkbox type="text" name="cbox2">Valor2</Checkbox>
