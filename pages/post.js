@@ -73,7 +73,7 @@ const Post = () => {
               <Checkbox type="text" name="cbox1">Valor1</Checkbox>
               <Checkbox type="text" name="cbox2">Valor2</Checkbox>
               <Checkbox type="text" name="cbox3">Valor3</Checkbox>
-              <Checkbox type="text" name="cbox4">Problema descubierto</Checkbox>
+              <Checkbox type="text" name="cbox4">Valor4</Checkbox>
             </HStack>
           </CheckboxGroup>
         </FormControl>
