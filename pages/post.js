@@ -22,7 +22,6 @@ import {Container} from '../components'
 const Post = () => {
   const router = useRouter()
   const [content, setContent] = useState({
-    cbox:'',
     premium:'',
     title: '',
     description: '',
@@ -65,19 +64,8 @@ const Post = () => {
         <Heading mt={5} mb={7}>
           Submit a new internship to our database
         </Heading>
-        <FormControl id="cbox" isRequired mb={marginBetweenElements} as='fieldset'>
-          <FormLabel as="legend">CheckboxGroup test</FormLabel>
-          <CheckboxGroup>
-            <HStack spacing="24px">
-              <Checkbox type="text" name="cbox" value="Valor1" onChange={onChange} variant="filled">Valor1</Checkbox>
-              <Checkbox type="text" name="cbox" value="Valor2" onChange={onChange} variant="filled">Valor2</Checkbox>
-              <Checkbox type="text" name="cbox" value="Valor3" onChange={onChange} variant="filled">Valor3</Checkbox>
-              <Checkbox type="text" name="cbox" value="Valor4" onChange={onChange} variant="filled">Valor4</Checkbox>
-            </HStack>
-          </CheckboxGroup>
-        </FormControl>
         <FormControl id="premium" isRequired mb={marginBetweenElements}>
-          <FormLabel>Premium Opportunity Checkbox test</FormLabel>
+          <FormLabel>Premum Opportunity Checkbox test</FormLabel>
           <Checkbox type="text" name="premium" value="false" onChange={onChange} variant="filled">Simple Checkbox Dominated!</Checkbox>
         </FormControl>
         <FormControl id="title" isRequired mb={marginBetweenElements}>
