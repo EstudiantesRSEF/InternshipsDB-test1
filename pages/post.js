@@ -46,9 +46,9 @@ const Post = () => {
     setContent(prevState => ({...prevState, [name]: value}))
   }
 
-  const onChangeCBOX = e => {
-    const {value, name} = e.target
-    setContent(prevState => ({...prevState, value}))
+  const onChangeCBOX = j => {
+    const {value, name} = j.target
+    setContent(setState(prevState => ({...prevState, [name]: value})))
   }
 
   const onSubmit = async () => {
@@ -73,7 +73,7 @@ const Post = () => {
         </Heading>
         <FormControl id="cbox" isRequired mb={marginBetweenElements} as='fieldset'>
           <FormLabel as="legend">CheckboxGroup test</FormLabel>
-          <CheckboxGroup onChange={onChangeCBOX} variant="filled">
+          <CheckboxGroup onChange={onChange} variant="filled">
             <HStack spacing="24px">
               <Checkbox type="text" name="cbox" value="Valor1">Valor1</Checkbox>
               <Checkbox type="text" name="cbox" value="Valor2">Valor2</Checkbox>
