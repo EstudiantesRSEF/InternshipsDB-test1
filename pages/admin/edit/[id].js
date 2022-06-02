@@ -113,6 +113,8 @@ const EditEntry = () => {
               //</FormControl>
               <FormControl as='fieldset'
                 id="educationLevel"
+                isRequired
+                mb={marginBetweenElements}
               >
                 <FormLabel as='legend'>Education level</FormLabel>
                 <CheckboxGroup
