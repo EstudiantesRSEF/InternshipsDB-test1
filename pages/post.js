@@ -106,8 +106,8 @@ const Post = () => {
           <CheckboxGroup
             name="educationLevel"
             onChange={onChange}
-            //placeholder="Relevant education level"
-            //variant="filled"
+            placeholder="Relevant education level"
+            variant="filled"
           >
             <Checkbox value="Bachelors">Bachelors</Checkbox>
             <Checkbox value="Masters">Masters</Checkbox>
