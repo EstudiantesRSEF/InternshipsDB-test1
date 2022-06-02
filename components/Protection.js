@@ -11,7 +11,7 @@ import {
 import {Container} from './'
 
 const Protection = ({children}) => {
-  const officialPassword = 'crumbleLakes13'
+  const officialPassword = process.env.DB_PASS
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [allowed, setAllowed] = useState(false)
