@@ -101,17 +101,17 @@ const Post = () => {
         //    <option value="PhD">PhD</option>
         //  </Select>
         //</FormControl>
-        <FormControl as='fieldset' id="educationLevel" isRequired mb={marginBetweenElements}>
-          <FormLabel as='legend'>Education level</FormLabel>
+        <FormControl id="educationLevel" isRequired mb={marginBetweenElements}>
+          <FormLabel>Education level</FormLabel>
           <CheckboxGroup
             name="educationLevel"
             onChange={onChange}
+            //placeholder="Relevant education level"
+            //variant="filled"
           >
-            <HStack spacing='24px'>
-              <Checkbox value='Bachelors'>Bachelors</Checkbox>
-              <Checkbox value='Masters'>Masters</Checkbox>
-              <Checkbox value='PhD'>PhD</Checkbox>
-            </HStack>
+            <Checkbox value="Bachelors">Bachelors</Checkbox>
+            <Checkbox value="Masters">Masters</Checkbox>
+            <Checkbox value="PhD">PhD</Checkbox>
           </CheckboxGroup>
         </FormControl>
         <FormControl id="modality" isRequired mb={marginBetweenElements}>

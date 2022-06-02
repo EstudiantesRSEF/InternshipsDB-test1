@@ -111,22 +111,20 @@ const EditEntry = () => {
               //    <option value="PhD">PhD</option>
               //  </Select>
               //</FormControl>
-              <FormControl as='fieldset'
+              <FormControl
                 id="educationLevel"
                 isRequired
                 mb={marginBetweenElements}
               >
-                <FormLabel as='legend'>Education level</FormLabel>
+                <FormLabel>Education level</FormLabel>
                 <CheckboxGroup
                   name="educationLevel"
                   onChange={onChange}
                   value={content.educationLevel}
                 >
-                  <HStack spacing='24px'>
-                    <Checkbox value='Bachelors'>Bachelors</Checkbox>
-                    <Checkbox value='Masters'>Masters</Checkbox>
-                    <Checkbox value='PhD'>PhD</Checkbox>
-                  </HStack>
+                  <Checkbox value="Bachelors">Bachelors</Checkbox>
+                  <Checkbox value="Masters">Masters</Checkbox>
+                  <Checkbox value="PhD">PhD</Checkbox>
                 </CheckboxGroup>
               </FormControl>
               <FormControl id="modality" isRequired mb={marginBetweenElements}>
