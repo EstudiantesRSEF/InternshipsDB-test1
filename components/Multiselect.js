@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Menu, {
+import {
+  Menu
   MenuButton,
   MenuList,
   MenuItem,
@@ -7,8 +8,7 @@ import Menu, {
   MenuGroup,
   MenuOptionGroup,
   MenuItemOption
-} from "@chakra-ui/core/dist/Menu";
-import { MenuButtonProps } from "@chakra-ui/core/dist/Menu";
+} from "@chakra-ui/react";
 
 const MultiSelectMenu = (props) => {
   const { label, options, buttonProps } = props;
