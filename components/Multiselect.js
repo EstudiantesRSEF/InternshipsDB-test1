@@ -46,7 +46,7 @@ const MultiSelectMenu = (props) => {
               title={undefined}
               defaultValue={selectedOptions}
               type="checkbox"  
-              onChange={(values) => { console.log(values, props.name, "Multiselect")
+              onChange={(values) => {
                 setSelectedOptions(values.filter((_) => _.length));
                 props.onChange?.(values, props.name);
               }}
