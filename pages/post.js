@@ -36,9 +36,8 @@ const Post = () => {
     promotionalImage: '',
   })
 
-  const onChange = e => {
-    const {value, name} = e.target
-    setContent(prevState => ({...prevState, [name]: value}))
+  const onChange = (selectedOptions) => {
+    setContent(prevState => ({...prevState, [name]: selectedOptions}))
   }
 
   const onSubmit = async () => {
