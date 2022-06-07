@@ -36,7 +36,12 @@ const Post = () => {
     promotionalImage: '',
   })
 
-  const onChange = (selectedOptions, name) => {
+  const onChange = e => {
+    const {value, name} = e.target
+    setContent(prevState => ({...prevState, [name]: value}))
+  }
+  
+  const onChangeMS = (selectedOptions, name) => {
     setContent(prevState => ({...prevState, [name]: selectedOptions}))
   }
 
@@ -89,8 +94,9 @@ const Post = () => {
           <FormLabel>Education level</FormLabel>
           <Multiselect
             name="educationLevel"
+            label="BSc / MSc / PhD"
             options={["Bachelors", "Masters", "PhD"]}
-            onChange={onChange}
+            onChangeMS={onChangeMS}
           />
         </FormControl>
         <FormControl id="modality" isRequired mb={marginBetweenElements}>
