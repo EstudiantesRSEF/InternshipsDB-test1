@@ -10,18 +10,15 @@ import Menu, {
 } from "@chakra-ui/core/dist/Menu";
 import { MenuButtonProps } from "@chakra-ui/core/dist/Menu";
 
-const MultiSelectMenu = (props: MultiSelectMenuProps): JSX.Element => {
+const MultiSelectMenu = (props) => {
   const { label, options, buttonProps } = props;
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState([]);
   return (
     <Menu closeOnSelect={false}>
       {({ onClose }) => (
         <>
           <MenuButton
-            /* eslint-disable @typescript-eslint/ban-ts-comment */
-            // @ts-ignore <MenuButton> does have a 'type' prop because it is just a button. This is to make sure clicking this doesn't submit any forms.
             type="button"
-            /* eslint-enable @typescript-eslint/ban-ts-comment */
             backgroundColor={selectedOptions.length ? "purple.200" : "white"}
             color={selectedOptions.length ? "purple.500" : "gray.600"}
             borderColor={selectedOptions.length ? "purple.200" : "gray.300"}
@@ -68,13 +65,9 @@ const MultiSelectMenu = (props: MultiSelectMenuProps): JSX.Element => {
             >
               {options.map((option) => {
                 return (
-                  // Use 'type'='button' to make sure it doesn't default to 'type'='submit'.
                   <MenuItemOption
                     key={`multiselect-menu-${option}`}
-                    /* eslint-disable @typescript-eslint/ban-ts-comment */
-                    // @ts-ignore <MenuItemOption> does have a 'type' prop because it is just a button. This is to make sure clicking this doesn't submit any forms.
                     type="button"
-                    /* eslint-enable @typescript-eslint/ban-ts-comment */
                     value={option}
                   >
                     {option}
@@ -90,12 +83,5 @@ const MultiSelectMenu = (props: MultiSelectMenuProps): JSX.Element => {
 };
 
 MultiSelectMenu.displayName = "MultiSelectMenu";
-
-export type MultiSelectMenuProps = {
-  label: string;
-  options: string[];
-  onChange?: (selectedValues: string[]) => void;
-  buttonProps?: MenuButtonProps;
-};
 
 export default MultiSelectMenu;
