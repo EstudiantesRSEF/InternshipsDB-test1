@@ -15,7 +15,7 @@ import {
   Th,
   Td,
 } from '@chakra-ui/react'
-import {Container, HomeEntry, Protection} from '../../components'
+import {Container, Multiselect, HomeEntry, Protection} from '../../components'
 import db from '../../utils/db'
 
 const Review = ({entriesData}) => {
