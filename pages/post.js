@@ -15,7 +15,7 @@ import {
   InputGroup,
   InputLeftElement,
 } from '@chakra-ui/react'
-import {Container} from '../components'
+import {Container, Multiselect} from '../components'
 
 const Post = () => {
   const router = useRouter()
@@ -36,7 +36,7 @@ const Post = () => {
     promotionalImage: '',
   })
 
-  const onChange = (selectedOptions) => {
+  const onChange = (selectedOptions, name) => {
     setContent(prevState => ({...prevState, [name]: selectedOptions}))
   }
 
@@ -87,16 +87,11 @@ const Post = () => {
         </FormControl>
         <FormControl id="educationLevel" isRequired mb={marginBetweenElements}>
           <FormLabel>Education level</FormLabel>
-          <Select
+          <Multiselect
             name="educationLevel"
+            options={["Bachelors", "Masters", "PhD"]}
             onChange={onChange}
-            placeholder="Relevant education level"
-            variant="filled"
-          >
-            <option value="Bachelors">Bachelors</option>
-            <option value="Masters">Masters</option>
-            <option value="PhD">PhD</option>
-          </Select>
+          />
         </FormControl>
         <FormControl id="modality" isRequired mb={marginBetweenElements}>
           <FormLabel>Modality</FormLabel>
