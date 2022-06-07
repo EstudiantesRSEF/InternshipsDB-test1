@@ -19,13 +19,6 @@ const MultiSelectMenu = (props) => {
         <>
           <MenuButton
             type="button"
-            backgroundColor={selectedOptions.length ? "purple.200" : "white"}
-            color={selectedOptions.length ? "purple.500" : "gray.600"}
-            borderColor={selectedOptions.length ? "purple.200" : "gray.300"}
-            borderWidth={1}
-            p={2}
-            px={4}
-            borderRadius="25px"
             _focus={{
               outline: "none"
             }}
