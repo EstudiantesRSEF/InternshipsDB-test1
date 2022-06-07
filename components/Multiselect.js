@@ -59,7 +59,7 @@ const MultiSelectMenu = (props) => {
                 // Filter out empty strings, because, well, this component seems to add
                 // an empty string out of nowhere.
                 setSelectedOptions(values.filter((_) => _.length));
-                props.onChange?.(values);
+                props.onChange?.(values, props.name);
               }}
               /* eslint-enable @typescript-eslint/ban-ts-comment */
             >
