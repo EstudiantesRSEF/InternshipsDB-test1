@@ -52,12 +52,8 @@ const MultiSelectMenu = (props) => {
             <MenuOptionGroup
               title={undefined}
               defaultValue={selectedOptions}
-              type="checkbox"
-              /* eslint-disable @typescript-eslint/ban-ts-comment */
-              // @ts-ignore Arguments type is just wrong upstream.
-              onChange={(values: string[]) => {
-                // Filter out empty strings, because, well, this component seems to add
-                // an empty string out of nowhere.
+              type="checkbox"  
+              onChange={(values) => {
                 setSelectedOptions(values.filter((_) => _.length));
                 props.onChange?.(values, props.name);
               }}
