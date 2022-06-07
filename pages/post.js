@@ -42,7 +42,8 @@ const Post = () => {
   }
   
   const onChangeMS = (selectedOptions, name) => {
-    setContent(prevState => ({...prevState, [name]: selectedOptions}))
+    console.log(selectedOptions, name)
+    setContent(prevState => ({...prevState, [name]: selectedOptions.join(",")}))
   }
 
   const onSubmit = async () => {
@@ -52,6 +53,7 @@ const Post = () => {
 
   const validate = () => {
     for (const [key, value] of Object.entries(content)) {
+      console.log(content)
       if (value === '') return true
     }
     return false
