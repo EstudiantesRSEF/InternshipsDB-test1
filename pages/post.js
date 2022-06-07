@@ -98,7 +98,7 @@ const Post = () => {
             name="educationLevel"
             label="BSc / MSc / PhD"
             options={["Bachelors", "Masters", "PhD"]}
-            onChangeMS={onChangeMS}
+            onChange={onChangeMS}
           />
         </FormControl>
         <FormControl id="modality" isRequired mb={marginBetweenElements}>
